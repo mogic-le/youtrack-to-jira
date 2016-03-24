@@ -4,8 +4,12 @@ Youtrack-to-JIRA exporter
 Helps migrating projects and issues from your `Youtrack`__ bug tracking instance
 into `JIRA`__.
 
-It downloads all projects and issues from Youtrack's REST API and generates
+It downloads all projects and issues from `Youtrack's REST API`__ and generates
 ``.json`` files that can be loaded with JIRA's JSON importer.
+
+__ http://www.jetbrains.com/youtrack/
+__ https://www.atlassian.com/software/jira/
+__ http://confluence.jetbrains.com/display/YTD65/YouTrack+REST+API+Reference
 
 
 Supported data
@@ -61,9 +65,10 @@ Known problems
   workflow.
 - Since per-project JSON files are generated, cross-project links will
   not be imported.
-
-__ http://www.jetbrains.com/youtrack/
-__ https://www.atlassian.com/software/jira/
+- Only 500 issues per project are exported.
+  If you have projects with more issues, manually adjust the ``max`` parameter
+  in ``issues.php`` and generate multiple xml files.
+  Then merge the files with ``merge-issuefiles.sh`` into a single xml file
 
 
 Dependencies

@@ -15,10 +15,12 @@ $context = stream_context_create(
         ]
     ]
 );
+//youtrack's internal max value is 500; you won't get around this
 echo file_get_contents(
     $url . 'rest/issue/byproject/' . rawurlencode($proj)
     . '?wikifyDescription=true'
-    . '&max=10000',
+    . '&after=0'
+    . '&max=500',
     false, $context
 );
 ?>
