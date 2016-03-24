@@ -59,6 +59,9 @@ Known problems
 ==============
 - If issues were deleted in Youtrack, JIRA will assign new keys to the following
   issues.
+
+  Use ``fill.php project.json > project-fix.json`` to add dummy issues that fill
+  the void.
 - Workflows are a huge issue. It's best to use the standard workflow and adjust
   the ``$statemap`` to it.
   Newly created (and imported) projects always get the standard Jira issue
