@@ -1,5 +1,5 @@
 /config.php
-/cookie.txt
+/config.php-*
 /html2confluence
 /json
 /restdata
