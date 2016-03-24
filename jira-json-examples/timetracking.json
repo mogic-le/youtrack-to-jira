@@ -1,0 +1,22 @@
+"issues": [
+                {
+                    "summary" : "My Example Time Tracking issue",
+                    "externalId": "1",
+                    "originalEstimate": "P1W3D",
+                    "timeSpent": "PT4H",
+                    "estimate": "P2D",
+                    "worklogs": [
+                        {
+                            "author": "admin",
+                            "comment": "Worklog",
+                            "startDate": "P-1D", //can be a Period or DateTime
+                            "timeSpent": "PT1M"
+                        },
+                        {
+                            "author": "admin",
+                            "startDate": "2014-01-14T17:00:00.000+0100",
+                            "timeSpent": "PT3H"
+                        }
+                    ]
+                }
+            ]

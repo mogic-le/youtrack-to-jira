@@ -1,0 +1,34 @@
+"customFieldValues": [
+                    //Custom Fields which accepts single values:
+                        {
+                            "fieldName": "My Awesome Text Field (single line)",
+                            "fieldType": "com.atlassian.jira.plugin.system.customfieldtypes:textfield",
+                            "value": "some text"
+                        },
+                        {
+                            "fieldName": "My Awesome Select List (single choice)",
+                            "fieldType": "com.atlassian.jira.plugin.system.customfieldtypes:select",
+                            "value": "some select"
+                        },
+                    //Custom Fields which accepts multiple values:
+                        {
+                            "fieldName": "My Awesome Checkboxes",
+                            "fieldType": "com.atlassian.jira.plugin.system.customfieldtypes:multicheckboxes",
+                            "value": [ "multiple", "checkboxes" ]
+                        },
+                        {
+                            "fieldName": "My Awesome User Picker (multiple users)",
+                            "fieldType": "com.atlassian.jira.plugin.system.customfieldtypes:multiuserpicker",
+                            "value": [ "admin", "fred" ]
+                        },
+                    //Custom Fields which accepts Options in hierarchy. That's only cascading select from standard JIRA pool.
+                         {
+                            "fieldName": "My Awesome Select List (cascading)",
+                            "fieldType": "com.atlassian.jira.plugin.system.customfieldtypes:cascadingselect",
+                            "value":
+                            {
+                                "": "Parent Value",
+                                "1": "Child Value"
+                            }
+                        }
+]

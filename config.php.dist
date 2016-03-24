@@ -1,0 +1,60 @@
+<?php
+$username = 'FIXME';
+$password = 'FIXME';
+$url = 'https://FIXME/';
+$fileUriBase = 'http://FIXME/';
+
+$usermap = array(
+    //youtrack -> jira
+    'youtrackusername' => 'jirausername',
+);
+$typemap = array(
+    'Bug' => 'Bug',
+    'Cosmetics' => 'Task',
+);
+$priomap = array(
+    'Blocker'  => 'Highest',
+    'Critical' => 'Highest',
+    'Major'    => 'High',
+    'Normal'   => 'Medium',
+    'Minor'    => 'Low',
+);
+$statemap = array(
+    "Duplicate" => array(
+        'status'     => 'Closed',
+        'resolution' => 'Duplicate',
+    ),
+    "Fixed" => array(
+        'status'     => 'Closed',
+        'resolution' => 'Done',
+    ),
+    "In Progress" => array(
+        'status'     => 'In Progress',
+        'resolution' => '',
+    ),
+    "Obsolete" => array(
+        'status'     => 'Closed',
+        'resolution' => "Won't Do",
+    ),
+    "Won't fix" => array(
+        'status'     => 'Closed',
+        'resolution' => "Won't Do",
+    ),
+    "Open" => array(
+        'status'     => 'Open',
+        'resolution' => '',
+    ),
+    "QA" => array(
+        'status'     => 'In Progress',
+        'resolution' => '',
+    ),
+    "Reopened" => array(
+        'status'     => 'Reopened',
+        'resolution' => '',
+    ),
+    "Verified" => array(
+        'status'     => 'Closed',
+        'resolution' => 'Done',
+    ),
+);
+?>

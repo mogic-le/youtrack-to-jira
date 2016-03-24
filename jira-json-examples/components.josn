@@ -1,0 +1,8 @@
+"components": [
+                "Component", //Component specified only by name
+                { // Component specified by object
+                    "name": "SomeName",
+                    "lead": "admin",
+                    "description": "Some description"
+                }
+            ],

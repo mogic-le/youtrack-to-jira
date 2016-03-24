@@ -1,0 +1,18 @@
+{
+    "projects": [
+        {
+            "name": "Sample data",
+            "key": "SAM",
+            "issues": [
+                {
+					"key" : "SAM-123",
+                    "status" : "Open",
+                    "reporter" : "admin",
+                    "summary" : "Parent case",
+                    "externalId": "123"
+                }
+            ]
+        }
+    ]
+}
+

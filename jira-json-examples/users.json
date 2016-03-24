@@ -1,0 +1,9 @@
+"users": [ 
+	{
+        "name" : "someuser",
+        "groups" : [ "jira-users", "my-custom-group" ],
+        "active" : true,
+        "email" : "user1@example.com",
+        "fullname" : "User 1"
+	}
+]

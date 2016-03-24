@@ -1,0 +1,13 @@
+"worklogs": [
+        {
+            "author": "admin",
+            "comment": "Worklog",
+            "startDate": "2012-08-31T17:59:02.161+0100",
+            "timeSpent": "PT1M"
+        },
+        {
+            "author": "admin",
+            "startDate": "2012-08-31T17:59:02.161+0100",
+            "timeSpent": "PT3H"
+        }
+    ]
