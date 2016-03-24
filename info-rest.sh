@@ -10,4 +10,4 @@ echo Issue priorities:
 xmlstarlet sel -t -v '/issues/issue/field[@name="Priority"]/valueId' -n restdata/issues-*.xml |sort|uniq -c
 
 echo Users:
-xmlstarlet sel -t -v '/issues/issue/field[@name="Assignee" or @name="updaterName" or @name="reporterName"]/value' -n restdata/issues-*.xml |sort|uniq -c
+xmlstarlet sel -t -v '/issues/issue/field[@name="Assignee" or @name="updaterName" or @name="reporterName"]/value' -n -v '/issues/issue/comment/@author' -n restdata/issues-*.xml |sort|uniq -c
