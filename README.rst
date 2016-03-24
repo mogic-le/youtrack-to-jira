@@ -36,7 +36,7 @@ Usage
    again by adding all the user names, issue types, priorities and
    issue states you can extract from the XML files.
 
-   Use ``rest-info.sh`` to extract these information from XML files.
+   Use ``info-rest.sh`` to extract these information from XML files.
 #. Start a web server that allows access to ``restdata/files/`` so that
    JIRA can fetch the attachments from there
    (adjust ``$fileUriBase`` in ``config.php``)

@@ -26,7 +26,7 @@ function login()
 {
     global $username, $password, $url;
 
-    $cookiefile = __DIR__ . '/cookie.txt';
+    $cookiefile = __DIR__ . '/restdata/cookie.txt';
     if (file_exists($cookiefile)) {
         return file_get_contents($cookiefile);
     }
