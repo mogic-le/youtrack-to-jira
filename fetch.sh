@@ -1,4 +1,8 @@
 #!/bin/sh
+
+#create directory restdata if missing
+mkdir -p restdata
+
 #fetch project list
 php projects.php | xmllint --format - > restdata/projects.xml
 
@@ -18,6 +22,9 @@ for i in `xmlstarlet sel -t -v '/issues/issue/@id' -n restdata/issues-*.xml`; do
     echo $i
     php issue.php $i | xmllint --format - > restdata/issues/$i.xml
 done
+
+#create directory json if missing
+mkdir -p json
 
 # convert data to jira import json
 for i in `xmlstarlet sel -t -v '/projects/project/@shortName' restdata/projects.xml`; do
