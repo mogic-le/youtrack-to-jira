@@ -143,5 +143,5 @@ foreach ($users as $user => $fullName) {
     $json->users[] = ['name' => $user, 'fullname' => $fullName];
 }
 
-echo json_encode($json) . "\n";
+echo json_encode($json, JSON_PRETTY_PRINT) . "\n";
 ?>

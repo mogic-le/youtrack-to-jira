@@ -29,5 +29,5 @@ mkdir -p json
 # convert data to jira import json
 for i in `xmlstarlet sel -t -v '/projects/project/@shortName' restdata/projects.xml`; do
     echo $i
-    php json-project.php $i | jq . > json/$i.json
+    php json-project.php $i > json/$i.json
 done

@@ -48,5 +48,5 @@ foreach ($json->projects as $project) {
         }
     );
 }
-echo json_encode($json);
+echo json_encode($json, JSON_PRETTY_PRINT);
 ?>
