@@ -26,10 +26,9 @@ Supported data
 Usage
 =====
 #. Clone this repository
-#. Grab a copy of `html2confluence`__
-   (or our `own fork`__ with the neccessary script)::
+#. Grab a copy of `html2confluence`::
 
-       $ git clone git@github.com:mogic-le/html2confluence.git
+       $ git clone https://github.com/aha-app/html2confluence
 
 #. Copy ``config.php.dist`` to ``config.php`` and adjust youtrack
    username, password and URL.
@@ -50,9 +49,6 @@ Usage
 
    Do that on a copy of your JIRA instance; many things can go wrong that you
    will have to fix before you an import with no errors.
-
-__ https://github.com/k1w1/html2confluence
-__ https://github.com/mogic-le/html2confluence
 
 
 Known problems
