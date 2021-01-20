@@ -68,11 +68,6 @@ Known problems
   workflow.
 - Since per-project JSON files are generated, cross-project links will
   not be imported.
-- Only 500 issues per project are exported.
-  If you have projects with more issues, manually adjust the ``max`` parameter
-  in ``issues.php`` and generate multiple xml files.
-  Then merge the files with ``merge-issuefiles.sh`` into a single xml file
-
 
 Dependencies
 ============
