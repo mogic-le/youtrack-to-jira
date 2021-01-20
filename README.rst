@@ -70,7 +70,6 @@ Dependencies
 * `git <https://git-scm.com/>`_
 * `PHP <https://php.net/>`_ 5.4+
 * `xmlstarlet <http://xmlstar.sourceforge.net/>`_
-* `xmllint <http://xmlsoft.org/xmllint.html>`_
 
 
 Author

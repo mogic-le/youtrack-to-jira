@@ -44,6 +44,7 @@ do {
 } while($count == 500);
 
 $res->appendChild($iss);
+$res->formatOutput = true;
 $res->save('php://output');
 
 ?>

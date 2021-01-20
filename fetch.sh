@@ -4,12 +4,12 @@
 mkdir -p restdata
 
 #fetch project list
-php projects.php | xmllint --format - > restdata/projects.xml
+php projects.php > restdata/projects.xml
 
 #fetch issue list for each project
 for i in `xmlstarlet sel -t -v '/projects/project/@shortName' restdata/projects.xml`; do
     echo $i
-    php issues.php $i | xmllint --format - > restdata/issues-$i.xml
+    php issues.php $i > restdata/issues-$i.xml
 done
 
 # download all files
