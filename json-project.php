@@ -42,8 +42,10 @@ $components = array();
 $users      = array();
 $versions   = array();
 
-foreach ($xproj->subsystems->sub as $subsystem) {
-    $jproject->components[] = (string) $subsystem['value'];
+if(isset($xproj->subsystems->sub)) {
+    foreach ($xproj->subsystems->sub as $subsystem) {
+        $jproject->components[] = (string) $subsystem['value'];
+    }
 }
 
 foreach ($xi->issue as $xissue) {
