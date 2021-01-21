@@ -53,5 +53,19 @@ foreach ($json->projects as $project) {
         }
     );
 }
-echo json_encode($json, JSON_PRETTY_PRINT);
+
+if (!defined('JSON_INVALID_UTF8_SUBSTITUTE')) {
+    //PHP < 7.2 Define it as 0 so it does nothing
+    define('JSON_INVALID_UTF8_SUBSTITUTE', 0);
+}
+
+$json = json_encode($json, JSON_PRETTY_PRINT | JSON_INVALID_UTF8_SUBSTITUTE);
+
+if (!$json) {
+    file_put_contents('php://stderr', "JSON could not be encoded\n");
+    exit(2);    
+}
+
+echo $json;
+
 ?>
