@@ -13,7 +13,7 @@ foreach (glob(__DIR__ . '/restdata/issues-*.xml') as $issuesfile) {
         if (file_exists($fileName)) {
             continue;
         }
-        echo "Fetching " . (string) $xFile . "\n";
+        echo "> Fetching " . (string) $xFile . " (" . $xFile['id'] . ")\n";
         exec(
             'curl'
             . ' --silent'
