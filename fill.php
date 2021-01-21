@@ -3,7 +3,7 @@
  * Fill JSON file with dummy issues to keep original numbering
  */
 if ($argc < 2) {
-    echo "Pass JSON file name\n";
+    file_put_contents('php://stderr', "Pass JSON file name\n");
     exit(1);
 }
 require 'config.php';

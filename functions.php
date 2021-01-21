@@ -47,7 +47,7 @@ function login()
     );
     $response = file_get_contents($url . 'rest/user/login', false, $context);
     if ($response === false) {
-        echo "failed to login\n";
+        file_put_contents('php://stderr', "failed to login\n");
         exit(1);
     }
     $cookies = array();

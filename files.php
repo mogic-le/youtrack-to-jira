@@ -24,7 +24,7 @@ foreach (glob(__DIR__ . '/restdata/issues-*.xml') as $issuesfile) {
             $retval
         );
         if ($retval !== 0) {
-            echo "Error loading file:\n" . $xFile->asXML() . "\n";
+            file_put_contents('php://stderr', "Error loading file:\n" . $xFile->asXML() . "\n");
             exit(2);
         }
     }

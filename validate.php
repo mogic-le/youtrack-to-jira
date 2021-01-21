@@ -1,6 +1,6 @@
 <?php
 if ($argc < 2) {
-    echo "Project key missing\n";
+    file_put_contents('php://stderr', "Project key missing\n");
     exit(1);
 }
 $proj = $argv[1];
@@ -10,13 +10,13 @@ require_once 'functions.php';
 
 $projectsfile = __DIR__ . '/restdata/projects.xml';
 if (!file_exists($projectsfile)) {
-    echo "File does not exist: $projectsfile\n";
+    file_put_contents('php://stderr', "File does not exist: $projectsfile\n");
     exit(1);
 }
 
 $issuesfile = __DIR__ . '/restdata/issues-' . $proj . '.xml';
 if (!file_exists($issuesfile)) {
-    echo "File does not exist: $issuesfile\n";
+    file_put_contents('php://stderr', "File does not exist: $issuesfile\n");
     exit(1);
 }
 $xp = simplexml_load_file($projectsfile);

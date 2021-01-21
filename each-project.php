@@ -2,7 +2,7 @@
 
 $projectsfile = __DIR__ . '/restdata/projects.xml';
 if (!file_exists($projectsfile)) {
-    echo "File does not exist: $projectsfile\n";
+    file_put_contents('php://stderr', "File does not exist: $projectsfile\n");
     exit(1);
 }
 

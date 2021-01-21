@@ -1,13 +1,13 @@
 <?php
 if ($argc < 2) {
-    echo "Project key missing\n";
+    file_put_contents('php://stderr', "Project key missing\n");
     exit(1);
 }
 $proj = $argv[1];
 
 $issuesfile = __DIR__ . '/restdata/issues-' . $proj . '.xml';
 if (!file_exists($issuesfile)) {
-    echo "File does not exist: $issuesfile\n";
+    file_put_contents('php://stderr', "File does not exist: $issuesfile\n");
     exit(1);
 }
 
