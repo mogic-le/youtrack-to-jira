@@ -25,7 +25,7 @@ foreach ($json->projects as $project) {
     $last = end($ids);
     for ($id = 1; $id <= $last; $id++) {
         if (!array_key_exists($id, $keys)) {
-            //echo "Missing: $id\n";
+            //echo "... Missing: $id\n";
             $project->issues[] = (object) array(
                 'summary'     => 'Importdummy',
                 'description' => 'Import dummy issue to keep original numbering',

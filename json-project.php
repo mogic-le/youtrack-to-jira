@@ -131,6 +131,8 @@ foreach ($xi->issue as $xissue) {
     }
 
     $jproject->issues[] = $issue;
+
+    //echo "... " . $issue->externalId . "\n";
 }
 
 $jproject->components = array_keys($components);
