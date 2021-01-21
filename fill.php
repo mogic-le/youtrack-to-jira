@@ -11,6 +11,11 @@ require 'config.php';
 $file = $argv[1];
 $json = json_decode(file_get_contents($file));
 
+if ($json === false) {
+    file_put_contents('php://stderr', "Passed JSON file is not valid\n");
+    exit(2);    
+}
+
 $dummyAuthor = reset($usermap);
 $dummyDate   = '2010-01-01T00:00:00+00:00';
 
