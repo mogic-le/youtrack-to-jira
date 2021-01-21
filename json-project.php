@@ -10,13 +10,13 @@ require_once 'functions.php';
 
 $projectsfile = __DIR__ . '/restdata/projects.xml';
 if (!file_exists($projectsfile)) {
-    "File does not exist: $projectsfile\n";
+    echo "File does not exist: $projectsfile\n";
     exit(1);
 }
 
 $issuesfile = __DIR__ . '/restdata/issues-' . $proj . '.xml';
 if (!file_exists($issuesfile)) {
-    "File does not exist: $issuesfile\n";
+    echo "File does not exist: $issuesfile\n";
     exit(1);
 }
 $xp = simplexml_load_file($projectsfile);
